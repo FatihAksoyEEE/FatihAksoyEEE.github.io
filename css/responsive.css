@@ -1,0 +1,380 @@
+/* ============================================
+   RESPONSIVE DESIGN
+   Fatih Aksoy Portfolio
+   Mobile-first approach
+   ============================================ */
+
+/* ==================== LARGE DESKTOP (1280px+) ==================== */
+@media (min-width: 1280px) {
+    .container {
+        padding: 0 var(--space-8);
+    }
+
+    .hero-name {
+        font-size: var(--fs-6xl);
+    }
+
+    .hero-title {
+        font-size: var(--fs-3xl);
+    }
+}
+
+/* ==================== DESKTOP (1024px - 1279px) ==================== */
+@media (max-width: 1279px) {
+    :root {
+        --container-max: 1024px;
+    }
+}
+
+/* ==================== TABLET (768px - 1023px) ==================== */
+@media (max-width: 1023px) {
+    :root {
+        --container-max: 768px;
+        --nav-height: 70px;
+        --space-20: 4rem;
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--fs-4xl);
+    }
+
+    h2 {
+        font-size: var(--fs-3xl);
+    }
+
+    /* Navigation */
+    .nav-menu {
+        gap: var(--space-4);
+    }
+
+    .nav-link {
+        font-size: var(--fs-sm);
+    }
+
+    /* Hero */
+    .hero-cta {
+        gap: var(--space-3);
+    }
+
+    .btn {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--fs-sm);
+    }
+
+    /* Grid */
+    .grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* ==================== MOBILE (640px - 767px) ==================== */
+@media (max-width: 767px) {
+    :root {
+        --container-padding: var(--space-4);
+        --nav-height: 60px;
+        --space-20: 3rem;
+        --space-16: 3rem;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: var(--fs-3xl);
+    }
+
+    h2 {
+        font-size: var(--fs-2xl);
+    }
+
+    h3 {
+        font-size: var(--fs-xl);
+    }
+
+    /* Navigation - Mobile Menu */
+    .nav-menu {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        border-bottom: var(--border-width) solid var(--glass-border);
+        flex-direction: column;
+        gap: 0;
+        padding: var(--space-4) 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all var(--transition-base);
+        box-shadow: var(--shadow-xl);
+        z-index: var(--z-dropdown);
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        padding: var(--space-3) var(--space-4);
+        width: 100%;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: calc(100vh - var(--nav-height));
+        padding: var(--space-8) 0;
+    }
+
+    .hero-greeting {
+        font-size: var(--fs-base);
+    }
+
+    .hero-name {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .hero-title {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+        min-height: 50px;
+    }
+
+    .hero-description {
+        font-size: var(--fs-base);
+        margin-bottom: var(--space-6);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: var(--space-3);
+        align-items: stretch;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .stat-number {
+        font-size: var(--fs-3xl);
+    }
+
+    .scroll-indicator {
+        bottom: var(--space-4);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: var(--space-3) var(--space-5);
+        font-size: var(--fs-sm);
+    }
+
+    /* Cards */
+    .card {
+        padding: var(--space-4);
+    }
+
+    /* Grid */
+    .grid {
+        gap: var(--space-4);
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section */
+    .section {
+        padding: var(--space-12) 0;
+    }
+
+    .section-title {
+        margin-bottom: var(--space-8);
+        font-size: var(--fs-2xl);
+    }
+
+    /* Footer */
+    .footer {
+        padding: var(--space-12) 0 var(--space-6);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    /* Social Links */
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        padding: var(--space-6);
+        margin: var(--space-4);
+    }
+}
+
+/* ==================== SMALL MOBILE (320px - 639px) ==================== */
+@media (max-width: 639px) {
+    :root {
+        --fs-5xl: 2.5rem;
+        --fs-4xl: 2rem;
+        --fs-3xl: 1.75rem;
+        --fs-2xl: 1.5rem;
+    }
+
+    .nav-logo {
+        font-size: var(--fs-xl);
+    }
+
+    .theme-toggle {
+        width: 50px;
+        height: 28px;
+    }
+
+    .theme-toggle-slider {
+        width: 20px;
+        height: 20px;
+    }
+
+    [data-theme="light"] .theme-toggle-slider {
+        transform: translateX(22px);
+    }
+}
+
+/* ==================== EXTRA SMALL MOBILE (< 375px) ==================== */
+@media (max-width: 374px) {
+    :root {
+        --container-padding: var(--space-3);
+    }
+
+    .hero-cta .btn {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--fs-xs);
+    }
+
+    .stat-item {
+        padding: var(--space-3);
+    }
+
+    .stat-number {
+        font-size: var(--fs-2xl);
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+}
+
+/* ==================== LANDSCAPE MODE (Mobile) ==================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: var(--space-6) 0;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+
+    .navbar,
+    .theme-toggle,
+    .nav-toggle,
+    .scroll-indicator,
+    .footer,
+    .btn {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ==================== HIGH CONTRAST MODE ==================== */
+@media (prefers-contrast: high) {
+    :root {
+        --glass-border: rgba(255, 255, 255, 0.3);
+    }
+
+    .card,
+    .btn-outline,
+    .nav-link {
+        border-width: var(--border-width-thick);
+    }
+}
+
+/* ==================== DARK MODE PREFERENCE ==================== */
+@media (prefers-color-scheme: light) {
+    html:not([data-theme]) {
+        --bg-primary: #f8f9fa;
+        --bg-secondary: #ffffff;
+        --text-primary: #1a1f3a;
+        --text-secondary: #495057;
+    }
+}
