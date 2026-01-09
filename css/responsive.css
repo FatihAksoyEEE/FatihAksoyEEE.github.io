@@ -105,16 +105,23 @@
         flex-direction: column;
         gap: 0;
         padding: var(--space-4) 0;
-        transform: translateY(-100%);
+        transform: translateY(-20px);
         opacity: 0;
+        pointer-events: none;
+        /* Tıklamayı engelle */
         transition: all var(--transition-base);
         box-shadow: var(--shadow-xl);
-        z-index: var(--z-dropdown);
+        z-index: var(--z-fixed);
+        /* Dropdown yerine fixed kullan */
+        max-height: calc(100vh - var(--nav-height));
+        overflow-y: auto;
     }
 
     .nav-menu.active {
         transform: translateY(0);
         opacity: 1;
+        pointer-events: auto;
+        /* Tıklamayı aç */
     }
 
     .nav-menu li {

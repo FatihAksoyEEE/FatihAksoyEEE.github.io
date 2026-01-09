@@ -13,25 +13,14 @@
     position: relative;
     overflow: hidden;
     padding: var(--space-12) 0;
-    background-color: #000000;
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
 }
 
-/* PCB Background Pattern */
+/* Background Elements Removed for cleaner look */
 .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../images/pcb-background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.4;
-    animation: subtleMove 30s ease-in-out infinite;
-    pointer-events: none;
+    display: none;
 }
+
 
 /* Overlay gradient for depth */
 .hero-section::after {
