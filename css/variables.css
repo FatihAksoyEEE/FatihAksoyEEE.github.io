@@ -6,45 +6,44 @@
 :root {
   /* ==================== COLORS ==================== */
 
-  /* Dark Mode (Default) - Industrial Dark Theme */
-  --bg-primary: #18181b;
-  /* Soft siyah / Koyu gri - Ana arka plan */
-  --bg-secondary: #27272a;
-  /* Bir ton açık gri - Kartlar/Paneller */
-  --bg-tertiary: #3f3f46;
-  /* Orta gri - Hover states */
+  /* Dark Mode (Default) - Strictly No Blue Tones */
+  --bg-primary: #121212;
+  /* Mat Siyah - Ana arka plan */
+  --bg-secondary: #1e1e1e;
+  /* Koyu Gri - Kartlar */
+  --bg-tertiary: #2d2d2d;
+  /* Açık Gri - Hover */
 
-  --accent-primary: #e65100;
-  /* Koyu Turuncu - Ana vurgu */
-  --accent-secondary: #bf360c;
-  /* Daha koyu turuncu/kiremit - İkincil vurgu */
-  --accent-hover: #ff6d00;
-  /* Hover state için canlı turuncu */
+  --accent-primary: #FF6D00;
+  /* Canlı Turuncu */
+  --accent-secondary: #E65100;
+  /* Koyu Turuncu */
+  --accent-hover: #FF9E40;
+  /* Açık Turuncu */
 
-  --text-primary: #f4f4f5;
-  /* Kırık beyaz - Ana metin */
-  --text-secondary: #a1a1aa;
-  /* Gri - İkincil metin */
-  --text-muted: #71717a;
-  /* Koyu gri - Yardımcı metin */
+  --text-primary: #ffffff;
+  /* Beyaz */
+  --text-secondary: #e0e0e0;
+  /* Açık Gri */
+  --text-muted: #a0a0a0;
+  /* Gri */
 
-  --success: #10b981;
-  /* Zümrüt yeşili - Başarı */
-  --warning: #f59e0b;
-  /* Amber - Uyarı */
-  --error: #ef4444;
-  /* Kırmızı - Hata */
+  --success: #00c853;
+  --warning: #ffd600;
+  --error: #d50000;
 
-  /* Glassmorphism */
-  --glass-bg: rgba(39, 39, 42, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-shadow: rgba(230, 81, 0, 0.1);
+  /* Glassmorphism - Neutral Black/Gray */
+  --glass-bg: rgba(18, 18, 18, 0.95);
+  /* Siyah/Gri transparan - MAVİ YOK */
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: rgba(0, 0, 0, 0.5);
 
-  /* Gradients */
-  --gradient-hero: linear-gradient(180deg, #18181b 0%, #27272a 100%);
-  --gradient-button: linear-gradient(90deg, #e65100 0%, #ef6c00 100%);
-  --gradient-card: linear-gradient(135deg, rgba(39, 39, 42, 0.9) 0%, rgba(24, 24, 27, 0.8) 100%);
-  --gradient-accent: linear-gradient(90deg, #e65100 0%, #ff6d00 100%);
+  /* Gradients - Neutral Grayscale */
+  --gradient-hero: linear-gradient(180deg, #121212 0%, #1e1e1e 100%);
+  /* Sadece siyah-gri geçişi */
+  --gradient-button: linear-gradient(135deg, #FF6D00 0%, #E65100 100%);
+  --gradient-card: linear-gradient(145deg, #1e1e1e 0%, #121212 100%);
+  --gradient-accent: linear-gradient(90deg, #FF6D00 0%, #FF9E40 100%);
 
   /* ==================== TYPOGRAPHY ==================== */
 
@@ -178,24 +177,31 @@
 
 /* ==================== LIGHT MODE (Optional) ==================== */
 [data-theme="light"] {
-  --bg-primary: #f8f9fa;
+  /* Light Mode (Switchable with [data-theme="light"]) */
+  --bg-primary: #f3f4f6;
+  /* Açık gri - Göz yormayan zemin */
   --bg-secondary: #ffffff;
-  --bg-tertiary: #e9ecef;
+  /* Beyaz - Kartlar için */
+  --bg-tertiary: #e5e7eb;
+  /* Daha koyu gri - Hover */
 
-  --accent-primary: #0066cc;
-  --accent-secondary: #ff6b35;
-  --accent-hover: #0052a3;
+  --text-primary: #111827;
+  /* Koyu Antrasit - Ana metin */
+  --text-secondary: #4b5563;
+  /* Gri - İkincil metin */
+  --text-muted: #6b7280;
+  /* Soluk gri - Yardımcı metin */
 
-  --text-primary: #1a1f3a;
-  --text-secondary: #495057;
-  --text-muted: #6c757d;
-
+  /* Light Mode Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  --glass-shadow: rgba(0, 102, 204, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: rgba(0, 0, 0, 0.05);
 
-  --gradient-hero: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
-  --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(233, 236, 239, 0.8) 100%);
+  /* Light Mode Gradients */
+  --gradient-hero: linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%);
+  --gradient-button: linear-gradient(90deg, #e65100 0%, #ff6d00 100%);
+  /* Turuncu butonlar korunur */
+  --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(243, 244, 246, 0.8) 100%);
 }
 
 /* ==================== UTILITY CLASSES ==================== */

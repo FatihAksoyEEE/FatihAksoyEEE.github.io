@@ -161,7 +161,7 @@ pre {
 
 .navbar.scrolled {
     box-shadow: var(--shadow-lg);
-    background: rgba(10, 14, 39, 0.95);
+    background: rgba(18, 18, 18, 0.95);
 }
 
 .nav-container {
